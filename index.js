@@ -5,11 +5,14 @@ body.title = 'Title';
 
 const div2 = document.getElementById('div2');
 
-div2.id = 123
-console.log(div2.id)
+// title, id, className, classList, style
 
-console.log(div2.classList);
+// innerHtml, textContent
 
-div2.classList.replace('red', 'blue')
+div2.before('test before')
 
-div2.style.backgroundColor = 'green';
+div2.after('test')
+div2.after('test')
+
+div2.append('inner text') // string OR Node
+// div2.appendChild('inner text') // only Node -> error here
