@@ -5,15 +5,11 @@ body.title = 'Title';
 
 const div2 = document.getElementById('div2');
 
-div2.innerHTML = '<div id="newdiv" >tesxt</div>';
+div2.id = 123
+console.log(div2.id)
 
-const newdiv = document.querySelector('#newdiv');
+console.log(div2.classList);
 
-newdiv.textContent = 'New text';
+div2.classList.replace('red', 'blue')
 
-
-const div3 = document.getElementById('div3');
-
-const inners = div3.querySelectorAll('.mew')
-
-console.log(inners);
+div2.style.backgroundColor = 'green';
