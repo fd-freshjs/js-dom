@@ -1,28 +1,48 @@
+const prodTable = document.querySelector('#products-table')
 
-const body = document.body;
+// const tbody = prodTable.children[1];
+const tbody = prodTable.querySelector('tbody');
 
-body.title = 'Title';
+const arr = [
+  { name: 'Яблоко', price: 10 },
+  { name: 'Груша', price: 15 }, 
+  { name: 'Вишня', price: 20 },
+];
 
-const div2 = document.getElementById('div2');
+let trs = '';
+for (let i = 0; i < arr.length; i++) {
+  const elem = arr[i];
+  let tds = '';
 
-// title, id, className, classList, style
+  // Object.values(elem) + for
+  const tdName = `<td>${elem.name}</td>`;
+  const tdPrice = `<td>${elem.price}</td>`;
+  tds += tdName;
+  tds += tdPrice;
 
-// innerHtml, textContent
+  trs += `<tr>${tds}</tr>`;
+}
+tbody.innerHTML = trs;
 
-// div2.before('test before')
+// ==========
 
-// div2.after('test')
-// div2.after('test')
+let trs = [];
+for (let i = 0; i < arr.length; i++) {
+  const elem = arr[i];
+  let tds = [];
 
-// div2.append('<div>inner text</div>') // string OR Node
-// div2.appendChild('inner text') // only Node -> error here
+  const tdName = document.createElement('td');
+  tdName.textContent = elem.name;
+  tds.push(tdName);
 
-const newdiv = document.createElement('div');
-newdiv.id = 123;
-div2.append(newdiv, 'qwe'); // string, node, ...elem
+  const tdPrice =  document.createElement('td');
+  tdPrice.textContent = elem.price;
+  tds.push(tdPrice);
 
-const span = document.createElement('span');
-span.id = 123;
-div2.appendChild(span); // node
+  const tr = document.createElement('tr');
+  tr.append(...tds);
+  trs.push(tr);
+}
 
-span.remove();
+tbody.append(...trs);
+
