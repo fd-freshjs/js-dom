@@ -1,48 +1,48 @@
-const prodTable = document.querySelector('#products-table')
-
-// const tbody = prodTable.children[1];
-const tbody = prodTable.querySelector('tbody');
+const main = document.querySelector('main');
 
 const arr = [
-  { name: 'Яблоко', price: 10 },
-  { name: 'Груша', price: 15 }, 
-  { name: 'Вишня', price: 20 },
-];
+  { 
+  imgSrc: 'https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg' ,
+  title: 'Lorem Ipsum'
+}, {}, {}]
 
-let trs = '';
-for (let i = 0; i < arr.length; i++) {
-  const elem = arr[i];
-  let tds = '';
+for (let i = 0; i < 3; i++) {
+  const obj = arr[i];
 
-  // Object.values(elem) + for
-  const tdName = `<td>${elem.name}</td>`;
-  const tdPrice = `<td>${elem.price}</td>`;
-  tds += tdName;
-  tds += tdPrice;
+  const article = `<article>
+    <img src="" />
+    <h3>${obj.title}</h3>
+    <p>текст-"рыба", часто используемый в печати и вэб-дизайне</p>
+    <button>Сгенерировать</button>
+  </article>`;
 
-  trs += `<tr>${tds}</tr>`;
-}
-tbody.innerHTML = trs;
-
-// ==========
-
-let trs = [];
-for (let i = 0; i < arr.length; i++) {
-  const elem = arr[i];
-  let tds = [];
-
-  const tdName = document.createElement('td');
-  tdName.textContent = elem.name;
-  tds.push(tdName);
-
-  const tdPrice =  document.createElement('td');
-  tdPrice.textContent = elem.price;
-  tds.push(tdPrice);
-
-  const tr = document.createElement('tr');
-  tr.append(...tds);
-  trs.push(tr);
+  main.innerHTML += article;
 }
 
-tbody.append(...trs);
 
+
+
+// =========
+
+/* 
+const main = 
+for(i < 3) {
+  const article = document.createElement('article')
+
+  const img = document.createElement('img');
+  img.src = "https://google.com/...";
+  article.append(img);
+
+  const h3 = document.createElement('h3');
+  h3.textCentent = 'Heading of article';
+  article.append(h3);
+
+  const p = document.createElement('p')
+  article.append(p);
+
+  const button = document.createElement('button')
+  article.append(button)
+
+  main.append(article)
+}
+*/
