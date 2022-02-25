@@ -6,7 +6,10 @@ if (table !== null) {
   const tbody = table.querySelector('tbody');
 
   const trs = tbody.querySelectorAll('tr');
-  const tr4 = trs[3];
 
-  tr4.children[1].textContent = "04.04.2021";
+  const trIndex = Math.trunc(Math.random() * trs.length);
+  const tr = trs[trIndex];
+
+  tr.style.backgroundColor = 'green';
+  tr.children[0].textContent = "Скидка на " + tr.children[0].textContent;
 }
