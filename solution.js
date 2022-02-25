@@ -1,10 +1,12 @@
-const link = document.getElementById('w3r')
-// const link = document.querySelector('#w3r')
+const par = document.getElementById("text");
+// const par = document.querySelector('#text')
 
-if (link !== null) {
-  console.log(link.type);
-  console.log(link.rel);
-  console.log(link.target);
-  console.log(link.hreflang);
-  console.log(link.href);
-}
+/* par.style.color = 'violet';
+par.style.fontWeight = 'bolder';
+par.style.fontSize = '20px'; */
+
+// par.className = "parClass";
+par.classList.toggle("parClass");
+
+// par.id = "parId";
+// par.title = "parId";

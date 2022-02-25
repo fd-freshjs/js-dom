@@ -1,13 +1,18 @@
 
-div.blue {
-  color: blue;
+.parClass {
+  color: violet;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
-.red {
-  color: red;
+#parId {
+  background-color: blue;
 }
 
+[title=parId] {
+  background-color: blue;
+}
 
-.size {
-  font-size: 1.2em;
+.parClass:hover {
+  background-color: coral;
 }
