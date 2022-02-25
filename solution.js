@@ -1,12 +1,12 @@
-const par = document.getElementById("text");
-// const par = document.querySelector('#text')
+const table = document.getElementById("table");
+// const table = document.querySelector('#table')
 
-/* par.style.color = 'violet';
-par.style.fontWeight = 'bolder';
-par.style.fontSize = '20px'; */
+if (table !== null) {
+  // table.getElementsByTagName
+  // table.querySelector
+  const tbody = table.children[1];
+  const tr4 = tbody.children[3];
 
-// par.className = "parClass";
-par.classList.toggle("parClass");
-
-// par.id = "parId";
-// par.title = "parId";
+  const date = tr4.children[1];
+  date.textContent = "04.04.2021";
+}
